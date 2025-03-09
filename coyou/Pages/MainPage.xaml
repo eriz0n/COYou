@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="coyou.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="HotbarButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#71BF32"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid Padding="20">
+        <!-- Hintergrundbild als Image -->
+        <Image Source="logo_large.png"
+               Aspect="AspectFit"
+               IsVisible="True"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               HeightRequest="400"/>
+
+        
+        <!-- Hotbar Navigation -->
+        <Grid VerticalOptions="End">
+            <Frame BackgroundColor="#71BF32" Padding="20" CornerRadius="20">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30">
+                    <Button Text="👤" Clicked="OnUserPageClicked" Style="{StaticResource HotbarButton}" />
+                    <Button Text="👥" Clicked="OnFriendsPageClicked" Style="{StaticResource HotbarButton}" />
+                    <Button Text="📍" Clicked="OnRoutePageClicked" Style="{StaticResource HotbarButton}" />
+                    <Button Text="🏆" Clicked="OnLeaderboardPageClicked" Style="{StaticResource HotbarButton}" />
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

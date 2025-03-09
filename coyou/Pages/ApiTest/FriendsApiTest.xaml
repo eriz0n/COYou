@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="coyou.Pages.ApiTest.FriendsApiTest"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout
+                Padding="30"
+                Spacing="20"
+                VerticalOptions="Start">
+
+                <!--  Send Friend Request  -->
+                <Entry
+                    x:Name="SendFriendRequestEntry"
+                    HorizontalOptions="Center"
+                    Placeholder="Enter username" />
+                <Button
+                    Clicked="SendFriendRequest"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Send a friend request"
+                    Text="Send Friend Request" />
+                <Label
+                    x:Name="SendFriendRequestLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Nothing yet" />
+
+                <!--  Accept Friend Request  -->
+                <Entry
+                    x:Name="AcceptFriendRequestEntry"
+                    HorizontalOptions="Center"
+                    Placeholder="Enter username" />
+                <Button
+                    Clicked="AcceptFriendRequest"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Accept a pending friend request"
+                    Text="Accept Friend Request" />
+                <Label
+                    x:Name="AcceptFriendRequestLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Nothing yet" />
+
+                <!--  Get All Friends  -->
+                <Button
+                    Clicked="GetAllFriends"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Fetch the list of all friends"
+                    Text="Get All Friends" />
+                <Label
+                    x:Name="GetAllFriendsLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Nothing yet" />
+
+                <!--  Get All Received Friend Requests  -->
+                <Button
+                    Clicked="GetAllReceivedFriendRequests"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Fetch the list of received friend requests"
+                    Text="Get All Received Friend Requests" />
+                <Label
+                    x:Name="GetAllReceivedFriendRequestsLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Nothing yet" />
+
+                <!--  End Friendship  -->
+                <Entry
+                    x:Name="EndFriendshipEntry"
+                    HorizontalOptions="Center"
+                    Placeholder="Enter username" />
+                <Button
+                    Clicked="EndFriendship"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="End a friendship"
+                    Text="End Friendship" />
+                <Label
+                    x:Name="EndFriendshipLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Nothing yet" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

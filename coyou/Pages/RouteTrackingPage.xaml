@@ -1,0 +1,52 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="coyou.RouteTrackingPage"
+             Title="Route Tracking">
+
+    <Grid Padding="20">
+        <StackLayout Padding="10">
+
+            <!-- Eingabefelder -->
+            <Entry x:Name="StartEntry"
+                   Placeholder="Startort"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="0,10" />
+            <Entry x:Name="EndEntry"
+                   Placeholder="Endort"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="0,10" />
+            <Entry x:Name="LengthEntry"
+                   Placeholder="Länge in km"
+                   Keyboard="Numeric"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="0,10" />
+            
+            <!-- Auswahlfeld für Transporttyp -->
+            <Picker x:Name="MovementTypePicker"
+                    Title="Transporttyp wählen"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,10">
+            </Picker>
+
+            <!-- Speichern Button -->
+            <Button Text="Speichern"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    Clicked="OnSaveButtonClicked"
+                    HorizontalOptions="Center"
+                    Margin="0,10"/>
+        </StackLayout>
+
+        <!-- Hotbar Navigation -->
+        <Grid VerticalOptions="End">
+            <Frame BackgroundColor="#71BF32" Padding="20" CornerRadius="20">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30">
+                    <Button Text="👤" Clicked="OnUserPageClicked" Style="{StaticResource HotbarButton}" />
+                    <Button Text="👥" Clicked="OnFriendsPageClicked" Style="{StaticResource HotbarButton}" />
+                    <Button Text="📍" Clicked="OnRoutePageClicked" Style="{StaticResource HotbarButton}" />
+                    <Button Text="🏆" Clicked="OnLeaderboardPageClicked" Style="{StaticResource HotbarButton}" />
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

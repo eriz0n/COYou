@@ -1,0 +1,35 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="coyou.StreckenuebersichtPage"
+             BackgroundColor="White">
+
+    <StackLayout Padding="20">
+        <Label Text="Streckenübersicht" FontSize="Large" HorizontalOptions="Center" />
+
+        <!-- CollectionView für die Streckenanzeige -->
+        <CollectionView x:Name="streckenCollectionView" x:FieldModifier="public">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10" Spacing="10">
+                        <!-- Startpunkt -->
+                        <Label Text="Startpunkt:" FontAttributes="Bold" />
+                        <Label Text="{Binding Startpunkt}" FontSize="Medium" />
+
+                        <!-- Endpunkt -->
+                        <Label Text="Endpunkt:" FontAttributes="Bold" />
+                        <Label Text="{Binding Endpunkt}" FontSize="Medium" />
+
+                        <!-- Fortbewegungsmittel -->
+                        <Label Text="Fortbewegungsmittel:" FontAttributes="Bold" />
+                        <Label Text="{Binding Fortbewegungsmittel}" FontSize="Medium" />
+
+                        <!-- Abtrennung -->
+                        <BoxView HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Zurück zur Aufzeichnung" Clicked="OnZurueckZurStreckeClicked" />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="coyou.FriendRequestPage"
+             Title="Friend Requests">
+
+    <Grid Padding="20">
+
+        <!-- Liste der Freundschaftsanfragen -->
+        <ScrollView>
+            <CollectionView x:Name="FriendRequestCollection"
+                        ItemsSource="{Binding FriendRequests}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding="5">
+                        <Label Text="{Binding User}"
+                               VerticalOptions="Center"
+                               FontSize="18" />
+                        <Button Text="✅"
+                                BackgroundColor="Green"
+                                TextColor="White"
+                                CommandParameter="{Binding .}"
+                                Clicked="OnAcceptFriendRequestClicked"
+                                HorizontalOptions="EndAndExpand" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        </ScrollView>
+        <!-- Hotbar Navigation -->
+        <Grid VerticalOptions="End">
+            <Frame BackgroundColor="#71BF32" Padding="20" CornerRadius="20">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30">
+                    <Button Text="👤" Clicked="OnUserPageClicked" Style="{StaticResource HotbarButton}" />
+                    <Button Text="👥" Clicked="OnFriendsPageClicked" Style="{StaticResource HotbarButton}" />
+                    <Button Text="📍" Clicked="OnRoutePageClicked" Style="{StaticResource HotbarButton}" />
+                    <Button Text="🏆" Clicked="OnLeaderboardPageClicked" Style="{StaticResource HotbarButton}" />
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,35 @@
+<ContentPage
+    x:Class="coyou.StreckeAufzeichnenPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="White">
+
+    <StackLayout Padding="20">
+        <!--  Titel  -->
+        <Label
+            FontSize="24"
+            HorizontalOptions="Center"
+            Text="Strecke Aufzeichnen" />
+
+        <!--  Picker für Fortbewegungsmittel  -->
+        <Picker x:Name="fortbewegungsmittelPicker" Title="Fortbewegungsmittel wählen">
+            <Picker.Items>
+                <x:String>Bus</x:String>
+                <x:String>Zug</x:String>
+                <x:String>Auto</x:String>
+                <x:String>Fahrrad</x:String>
+                <x:String>Zu Fuß</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <!--  Startpunkt Eingabe  -->
+        <Entry x:Name="startpunktEntry" Placeholder="Startpunkt" />
+
+        <!--  Endpunkt Eingabe  -->
+        <Entry x:Name="endpunktEntry" Placeholder="Endpunkt" />
+
+        <!--  Button zum Hinzufügen der Strecke  -->
+        <Button Clicked="OnStreckeHinzufuegen" Text="Strecke Hinzufügen" />
+    </StackLayout>
+
+</ContentPage>

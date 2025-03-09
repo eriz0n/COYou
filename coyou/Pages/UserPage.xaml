@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="coyou.UserPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="User">
+
+    <!--  The main layout with Grid  -->
+    <Grid Padding="20">
+
+        <!--  Hauptinhalt  -->
+        <StackLayout Padding="10" Spacing="10">
+            <!--  User Info Section  -->
+            <StackLayout Padding="10" Spacing="10">
+                <Image
+                    x:Name="ProfilePictureView"
+                    Aspect="AspectFill"
+                    BackgroundColor="LightGray"
+                    HeightRequest="100"
+                    HorizontalOptions="Center"
+                    WidthRequest="100" />
+                <Label Text="First Name:" />
+                <Entry x:Name="FirstNameEntry" Text="" />
+
+                <Label Text="Last Name:" />
+                <Entry x:Name="LastNameEntry" Text="" />
+
+                <Label Text="User Name:" />
+                <Entry x:Name="UserNameEntry" Text="" />
+            </StackLayout>
+
+            <!--  Save Button  -->
+            <Button
+                Clicked="OnSaveClicked"
+                Style="{StaticResource HotbarButton}"
+                Text="Save" />
+            <Button
+                Clicked="OnEmissionsPageClicked"
+                Style="{StaticResource HotbarButton}"
+                Text="Emissions" />
+            <Button
+                BackgroundColor="Red"
+                Clicked="OnLogOutClicked"
+                Style="{StaticResource HotbarButton}"
+                Text="Log Out" />
+
+        </StackLayout>
+
+        <!--  Hotbar Navigation  -->
+        <Grid Padding="0" VerticalOptions="EndAndExpand">
+            <Frame
+                Padding="20"
+                BackgroundColor="#71BF32"
+                CornerRadius="20">
+                <StackLayout
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal"
+                    Spacing="30">
+                    <Button
+                        Clicked="OnUserPageClicked"
+                        Style="{StaticResource HotbarButton}"
+                        Text="👤" />
+                    <Button
+                        Clicked="OnFriendsPageClicked"
+                        Style="{StaticResource HotbarButton}"
+                        Text="👥" />
+                    <Button
+                        Clicked="OnRoutePageClicked"
+                        Style="{StaticResource HotbarButton}"
+                        Text="📍" />
+                    <Button
+                        Clicked="OnLeaderboardPageClicked"
+                        Style="{StaticResource HotbarButton}"
+                        Text="🏆" />
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

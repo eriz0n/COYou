@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="coyou.Pages.EmissionCalculatorPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Emission Data">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="20">
+
+                <!--  Auswahlfeld für Transport  -->
+                <StackLayout
+                    x:Name="Transportation"
+                    IsEnabled="False"
+                    IsVisible="False">
+                    <HorizontalStackLayout VerticalOptions="Center">
+                        <Label Text="Haupttransportmöglichkeit auswählen" VerticalOptions="Center" />
+                        <Picker x:Name="TransportationPicker" TitleColor="White" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Wöchentliche KM" VerticalOptions="Center" />
+                        <Entry
+                            x:Name="TransportationEntry"
+                            Keyboard="Numeric"
+                            Text="0"
+                            VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                </StackLayout>
+
+                <!--  Auswahlfeld für Diät  -->
+                <Label Text="Diät auswählen" />
+                <Picker x:Name="DietPicker" Title="" />
+
+                <!--  Müll  -->
+                <Label FontSize="18" Text="Wöchentlicher Müll" />
+
+                <HorizontalStackLayout>
+                    <Picker x:Name="WastePicker" TitleColor="White" />
+                    <Button
+                        BackgroundColor="#71BF32"
+                        Clicked="OnAddWasteClicked"
+                        Text="+"
+                        TextColor="White" />
+                </HorizontalStackLayout>
+                <VerticalStackLayout
+                    x:Name="WasteContainer"
+                    Spacing="10"
+                    VerticalOptions="Center" />
+
+
+                <!--  Strom  -->
+                <Label FontSize="18" Text="Wöchentlicher Stromverbrauch" />
+                <HorizontalStackLayout>
+                    <Picker x:Name="EnergyPicker" TitleColor="White" />
+                    <Button
+                        BackgroundColor="#71BF32"
+                        Clicked="OnAddEnergyClicked"
+                        Text="+"
+                        TextColor="White" />
+                </HorizontalStackLayout>
+                <VerticalStackLayout x:Name="EnergyContainer" Spacing="10" />
+
+
+                <!--  Absenden  -->
+                <Button
+                    BackgroundColor="#71BF32"
+                    Clicked="OnSubmitClicked"
+                    Text="Absenden"
+                    TextColor="White" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

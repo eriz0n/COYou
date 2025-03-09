@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="coyou.Pages.ApiNavigation"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <VerticalStackLayout>
+            <Button
+                Clicked="UserButtonClicked"
+                SemanticProperties.Hint="Add a description of what happens when clicked"
+                Text="User" />
+            <Button
+                Clicked="EmissionsButtonClicked"
+                SemanticProperties.Hint="Add a description of what happens when clicked"
+                Text="Emissions" />
+            <Button
+                Clicked="FriendsButtonClicked"
+                SemanticProperties.Hint="Add a description of what happens when clicked"
+                Text="Friends" />
+            <Button
+                Clicked="RoutesButtonClicked"
+                SemanticProperties.Hint="Add a description of what happens when clicked"
+                Text="Routes" />            
+            <Button
+                Clicked="CalculatorButtonClicked"
+                SemanticProperties.Hint="Add a description of what happens when clicked"
+                Text="Calculator" />
+            <Button
+                BackgroundColor="Red"
+                Clicked="OnLogoutClicked"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Text="Logout"
+                TextColor="White" />
+        </VerticalStackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

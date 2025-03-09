@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="coyou.Pages.ApiTest.RoutesApiTest"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <ScrollView>
+
+
+            <VerticalStackLayout
+                Padding="30"
+                Spacing="20"
+                VerticalOptions="Start">
+
+                <!--  Edit Route  -->
+                <Entry
+                    x:Name="EditRouteEntry"
+                    HorizontalOptions="Center"
+                    Keyboard="Numeric"
+                    Placeholder="Enter route ID" />
+                <Button
+                    Clicked="EditRoute"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Edit a route by its ID"
+                    Text="Edit Route" />
+                <Label
+                    x:Name="EditRouteLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Nothing yet" />
+
+                <!--  Delete Route  -->
+                <Entry
+                    x:Name="DeleteRouteEntry"
+                    HorizontalOptions="Center"
+                    Keyboard="Numeric"
+                    Placeholder="Enter route ID" />
+                <Button
+                    Clicked="DeleteRoute"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Delete a route by its ID"
+                    Text="Delete Route" />
+                <Label
+                    x:Name="DeleteRouteLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Nothing yet" />
+
+                <!--  Get User Routes  -->
+                <Button
+                    Clicked="GetUserRoutes"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Retrieve all routes for the user"
+                    Text="Get User Routes" />
+                <Label
+                    x:Name="GetUserRoutesLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Nothing yet" />
+
+                <!--  Add Route  -->
+                <Button
+                    Clicked="AddRoute"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Add a new route"
+                    Text="Add Route" />
+                <Label
+                    x:Name="AddRouteLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Nothing yet" />
+
+                <!--  Get All Types  -->
+                <Button
+                    Clicked="GetAllTypes"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Retrieve all available route types"
+                    Text="Get All Types" />
+                <Label
+                    x:Name="GetAllTypesLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Nothing yet" />
+
+                <!--  Get History  -->
+                <DatePicker
+                    x:Name="StartDatePicker"
+                    Format="yyyy-MM-dd"
+                    HorizontalOptions="Center" />
+                <DatePicker
+                    x:Name="EndDatePicker"
+                    Format="yyyy-MM-dd"
+                    HorizontalOptions="Center" />
+                <Button
+                    Clicked="GetHistory"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Retrieve history within a date range"
+                    Text="Get History" />
+                <Label
+                    x:Name="GetHistoryLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Nothing yet" />
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

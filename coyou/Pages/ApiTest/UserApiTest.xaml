@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="coyou.Pages.ApiTest.UserApiTest"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout
+                Padding="30"
+                Spacing="20"
+                VerticalOptions="Start">
+
+                <!--  Get User  -->
+                <Button
+                    Clicked="GetUser"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Retrieve user details"
+                    Text="Get User" />
+                <Label
+                    x:Name="GetUserLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="User details will appear here" />
+                <Image
+                    x:Name="ProfilePictureView"
+                    Aspect="AspectFill"
+                    BackgroundColor="LightGray"
+                    HeightRequest="100"
+                    HorizontalOptions="Center"
+                    WidthRequest="100" />
+
+                <!--  Edit User  -->
+                <Entry
+                    x:Name="FirstNameEntry"
+                    HorizontalOptions="Center"
+                    Placeholder="Enter first name" />
+                <Entry
+                    x:Name="LastNameEntry"
+                    HorizontalOptions="Center"
+                    Placeholder="Enter last name" />
+                <Entry
+                    x:Name="UserNameEntry"
+                    HorizontalOptions="Center"
+                    Placeholder="Enter username" />
+
+                <!--  Profile Picture Selection  -->
+                <Image
+                    x:Name="ProfilePicturePreview"
+                    Aspect="AspectFill"
+                    BackgroundColor="LightGray"
+                    HeightRequest="100"
+                    HorizontalOptions="Center"
+                    WidthRequest="100" />
+                <Button
+                    Clicked="SelectProfilePicture"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Select a profile picture"
+                    Text="Choose Profile Picture" />
+
+                <Button
+                    Clicked="EditUser"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Edit user details"
+                    Text="Edit User" />
+                <Label
+                    x:Name="EditUserLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Edit user details will appear here" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

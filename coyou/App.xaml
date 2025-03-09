@@ -1,0 +1,14 @@
+﻿<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="coyou.App">
+    <Application.Resources>
+        <!-- HotbarButton Style -->
+        <Style x:Key="HotbarButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#71BF32"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="CornerRadius" Value="10"/>
+        </Style>
+    </Application.Resources>
+</Application>

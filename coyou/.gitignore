@@ -1,0 +1,165 @@
+# --- .NET MAUI Essentials ---
+
+# Ignore build outputs
+bin/
+obj/
+out/
+AppPackages/
+MauiProgram.cs.bak
+
+# Ignore user-specific settings
+.vscode/
+.idea/
+*.user
+*.userosscache
+*.suo
+*.sln.cache
+*.sln.ide
+*.sln.docstates
+*.ncrunchproject
+*.ncrunchsolution
+*.vs/
+.vsconfig
+
+# Ignore logs and debug info
+*.log
+*.tlog
+*.pdb
+*.pgd
+*.opendb
+
+# Ignore Rider & Resharper files
+*.sln.DotSettings.user
+*.sln.DotSettings
+*.resharper
+.ReSharper/
+.ReSharperCache/
+.idea/
+
+# --- Platform-Specific Ignores ---
+
+# Android (Generated Files)
+android/bin/
+android/obj/
+android/app/
+android/.gradle/
+android/.idea/
+android/.settings/
+android/local.properties
+android/*.iml
+android/google-services.json
+android/app/google-services.json
+android/app/src/main/assets/google-services.json
+android/app/src/debug/res/values/google-services.json
+android/app/src/release/res/values/google-services.json
+android/key.jks
+android/app/key.jks
+
+# iOS / macOS (Generated Files)
+ios/bin/
+ios/obj/
+ios/Pods/
+ios/.xcworkspace/
+ios/.xcodeproj/
+ios/.swiftpm/
+ios/.package.resolved
+ios/build/
+ios/DerivedData/
+ios/.DS_Store
+ios/*.pbxuser
+ios/*.mode1v3
+ios/*.mode2v3
+ios/*.perspectivev3
+ios/.xcuserdata/
+ios/xcuserdata/
+ios/*.xcscmblueprint
+ios/GoogleService-Info.plist
+ios/app/GoogleService-Info.plist
+
+# Windows (Generated Files)
+windows/bin/
+windows/obj/
+windows/AppPackages/
+windows/Package.StoreAssociation.xml
+windows/Package.StoreAssociation.xml.bak
+windows/Generated Files/
+windows/*.pfx
+windows/*.cer
+
+# MacCatalyst
+maccatalyst/bin/
+maccatalyst/obj/
+maccatalyst/DerivedData/
+maccatalyst/.DS_Store
+
+# --- Common .NET Ignore ---
+
+# Ignore NuGet-related files
+*.nupkg
+*.snupkg
+*.nuspec
+.nuget/
+packages/
+project.lock.json
+project.assets.json
+paket-files/
+global.json
+
+# Ignore temporary & lock files
+*.lock.json
+*.cache
+*.tmp
+Thumbs.db
+*.bak
+
+# Ignore build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.class
+*.jar
+*.apk
+*.aab
+*.ipa
+*.app
+*.appxbundle
+*.msixbundle
+*.msix
+*.xcarchive
+
+# Ignore code coverage
+coverage/
+*.coverage
+*.coveragexml
+TestResults/
+*.testresults
+*.trx
+*.coverage
+
+# Ignore JetBrains Rider & Resharper
+.idea/
+*.sln.DotSettings
+*.sln.DotSettings.user
+
+# --- Secrets & Security ---
+
+# Ignore sensitive data (DO NOT COMMIT THESE!)
+secrets.json
+*.pfx
+*.key
+*.cer
+*.crt
+*.pem
+*.jks
+
+# --- Miscellaneous ---
+
+# Ignore MAUI hot reload files
+.maui-cache/
+.maui-workload/
+
+# Ignore local SQLite database
+*.db
+*.db-shm
+*.db-wal

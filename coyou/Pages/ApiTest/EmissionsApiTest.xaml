@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="coyou.Pages.ApiTest.EmissionsApiTest"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout
+                Padding="30"
+                Spacing="20"
+                VerticalOptions="Start">
+
+
+                <!--  Calculate Emissions  -->
+                <Button
+                    Clicked="CalculateEmissions"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Calculate emissions based on input data"
+                    Text="Calculate Emissions" />
+                <Label
+                    x:Name="CalculateEmissionsLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Result will appear here" />
+
+                <!--  Get Emissions of Week  -->
+                <Entry
+                    x:Name="YearEntry"
+                    HorizontalOptions="Center"
+                    Keyboard="Numeric"
+                    Placeholder="Enter Year" />
+                <Entry
+                    x:Name="WeekNumberEntry"
+                    HorizontalOptions="Center"
+                    Keyboard="Numeric"
+                    Placeholder="Enter Week Number" />
+                <Button
+                    Clicked="GetEmissionsOfWeek"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Get emissions for a specific week"
+                    Text="Get Emissions of Week" />
+                <Label
+                    x:Name="GetEmissionsOfWeekLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Result will appear here" />
+
+                <!--  Get All Waste Types  -->
+                <Button
+                    Clicked="GetAllWasteTypes"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Retrieve all waste types"
+                    Text="Get All Waste Types" />
+                <Label
+                    x:Name="GetAllWasteTypesLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Result will appear here" />
+
+                <!--  Get Weekly Leaderboard  -->
+                <Button
+                    Clicked="GetWeeklyLeaderboard"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="View the weekly leaderboard"
+                    Text="Get Weekly Leaderboard" />
+                <Label
+                    x:Name="GetWeeklyLeaderboardLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Leaderboard data will appear here" />
+
+                <!--  Get Emission History  -->
+                <Button
+                    Clicked="GetEmissionHistory"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="View past emissions data"
+                    Text="Get Emission History" />
+                <Label
+                    x:Name="GetEmissionHistoryLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Result will appear here" />
+
+                <!--  Get All Energy Consumption Types  -->
+                <Button
+                    Clicked="GetAllEnergyConsumptionTypes"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Retrieve energy consumption types"
+                    Text="Get All Energy Consumption Types" />
+                <Label
+                    x:Name="GetAllEnergyConsumptionTypesLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Result will appear here" />
+
+                <!--  Get All Diets  -->
+                <Button
+                    Clicked="GetAllDiets"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Retrieve diet types"
+                    Text="Get All Diets" />
+                <Label
+                    x:Name="GetAllDietsLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Result will appear here" />
+
+                <!--  Get Emissions of Current Week  -->
+                <Button
+                    Clicked="GetEmissionsOfCurrentWeek"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Get emissions for the current week"
+                    Text="Get Emissions of Current Week" />
+                <Label
+                    x:Name="GetEmissionsOfCurrentWeekLabel"
+                    Padding="10"
+                    BackgroundColor="MediumPurple"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    MaxLines="0"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Result will appear here" />
+
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

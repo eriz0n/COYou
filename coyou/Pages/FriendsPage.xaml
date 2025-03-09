@@ -1,0 +1,64 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="coyou.FriendsPage"
+             Title = "Friends">
+
+
+    <Grid Padding="20">
+        
+        <!-- Hauptinhalt -->
+        <ScrollView>
+        <StackLayout Grid.Row="1" Padding="10">
+            <Button Text="📩"
+                    FontSize="24"
+                    BackgroundColor="Transparent"
+                    Clicked="OnFriendRequestPageClicked"
+                    HorizontalOptions="Start"
+                    Grid.Column="1"
+                    Margin="0,5,10,5" />
+            <!-- Eingabe für Freundschaftsanfrage -->
+            <StackLayout Orientation="Horizontal" Padding="5">
+                <Entry x:Name="FriendRequestEntry"
+                       Placeholder="Nutzername eingeben"
+                       HorizontalOptions="FillAndExpand" />
+                <Button Text="➕"
+                        BackgroundColor="Green"
+                        TextColor="White"
+                        Clicked="OnSendFriendRequestClicked" />
+            </StackLayout>
+
+            <!-- Liste der Freunde -->
+            <CollectionView x:Name="FriendsCollection"
+                            ItemsSource="{Binding FriendsList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Label Text="{Binding Username}"
+                                   VerticalOptions="Center"
+                                   FontSize="18" />
+                            <Button Text="❌"
+                                    BackgroundColor="Red"
+                                    TextColor="White"
+                                    CommandParameter="{Binding .}"
+                                    Clicked="OnRemoveFriendClicked"
+                                    HorizontalOptions="EndAndExpand" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+        </ScrollView>
+
+        <!-- Hotbar Navigation -->
+        <Grid VerticalOptions="End">
+            <Frame BackgroundColor="#71BF32" Padding="20" CornerRadius="20">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30">
+                    <Button Text="👤" Clicked="OnUserPageClicked" Style="{StaticResource HotbarButton}" />
+                    <Button Text="👥" Clicked="OnFriendsPageClicked" Style="{StaticResource HotbarButton}" />
+                    <Button Text="📍" Clicked="OnRoutePageClicked" Style="{StaticResource HotbarButton}" />
+                    <Button Text="🏆" Clicked="OnLeaderboardPageClicked" Style="{StaticResource HotbarButton}" />
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

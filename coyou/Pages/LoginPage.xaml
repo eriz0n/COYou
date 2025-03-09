@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="coyou.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Login">
+
+    <VerticalStackLayout
+        Padding="30"
+        Spacing="20"
+        VerticalOptions="Start">
+        <Button
+            BackgroundColor="Transparent"
+            Clicked="OnGoogleLoginClicked"
+            FontSize="18"
+            HorizontalOptions="Center"
+            TextColor="White">
+            <Button.ImageSource>
+                <!-- Füge hier das Google-Icon hinzu -->
+                <FileImageSource File="google.png" />
+            </Button.ImageSource>
+        </Button>
+
+        <HorizontalStackLayout IsVisible="False" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Test API?"
+                VerticalOptions="Center" />
+            <CheckBox
+                x:Name="testApi"
+                IsChecked="False"
+                VerticalOptions="Center" />
+        </HorizontalStackLayout>
+        
+        <Button
+            Clicked="Skip"
+            IsVisible="True"
+            SemanticProperties.Hint="Add a description of what happens when clicked"
+            Text="Skip to MainPage" />
+    </VerticalStackLayout>
+
+</ContentPage>
